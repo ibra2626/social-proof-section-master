@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+$color-dark-purp: hsl(300, 43%, 22%);
+$color-p: hsl(303, 10%, 53%);
+$color-card: hsl(300, 24%, 96%);
+$color-card-span: hsl(333, 80%, 67%);
+$font-size-content: 0.9rem;
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border:none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    
+}
+body{
+    background-image: url('/assets/img/bg-pattern-top-desktop.svg'),url('img/bg-pattern-bottom-desktop.svg');
+    @media (max-width:1060px){
+        &{
+            background-image: url('/assets/img/bg-pattern-top-mobile.svg'),url('img/bg-pattern-bottom-mobile.svg');
+        }
+    }
+    background-repeat: no-repeat;
+    background-position: left top, 25rem 1rem;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+.social-feedback{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80vw;
+    min-height : 100vh;
+    margin:  auto;
+    .social-feedback-top{
+        
+        max-width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width:665px){
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .promotion{
+            max-width: 35vw;
+            @media (max-width:665px) {
+                &{
+                    max-width: 100vw;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+            h1{
+                color: $color-dark-purp;
+                font-size: 3rem;
+                font-weight: 700;
+                letter-spacing: -1px;
+                margin-bottom: 1rem;
+                @media (max-width:665px){
+                    font-size: 2rem;
+                }
+            }
+            p{
+                color: $color-p;
+                font-size: $font-size-content;
+                font-weight: 500;
+            }
+        }
+        .rated-cards{
+            --rated-star-bg-color:hsl(300, 24%, 96%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            max-height: 100vh;
+            @media (max-width:665px) {
+                &{
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+            .rate{
+                background-color: var(--rated-star-bg-color);
+                padding: 1rem 3rem 1rem 1rem;
+                border-radius: 0.7rem;
+                display: flex;
+                align-items: center;
+                @media (max-width:665px){
+                    &{
+                        
+                        padding-right: 1rem;
+                        margin-bottom: 1rem;
+                        display: inline-block;
+                        .stars{
+                            margin-bottom: 0.4rem;
+                        }
+                    }
+                }
+                span{
+                    font-size: $font-size-content;
+                    font-weight: 700;
+                    margin-left: 1.5rem;
+                    color: $color-dark-purp;
+                }
+            }
+            .star1{
+                margin-left: -10rem;
+            }
+            .star2{
+                margin-left: -7rem;
+            }
+            .star3{
+                margin-left: -3rem;
+            }
+            @media (min-width:665px) and (max-width:1060px){
+                .star1{
+                    margin-left: 0px;
+                }
+                .star2{
+                    margin-left: 0px;
+                }
+                .star3{
+                    margin-left: 0px;
+                }
+                .rate{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+            @media (max-width:665px) {
+                
+                .star1{
+                    margin-left: 0px;
+                }
+                .star2{
+                    margin-left: 0px;
+                }
+                .star3{
+                    margin-left: 0px;
+                }
+                .rate{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+        }
+    }
+    .social-feedback-bottom{
+        .comment-cards{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @media (min-width:0) and (max-width:1060px){
+                &{
+                    flex-direction: column;
+                }    
+            }
+            .card{
+                background-color: $color-dark-purp;
+                color: $color-card;
+                width: calc(100%/3.1);
+                padding: 3rem 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                border-radius: 0.4rem;
+                @media (min-width:0) and (max-width:1060px) {
+                    &{
+                        width: 100%;
+                    }
+                }
+                .card-header{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    img{
+                        width: 20%;
+                        border-radius: 50%;;
+                    }
+                    .person-info{
+                        margin-left: 1rem;
+                        h4{
+                            font-size: $font-size-content;
+                        }
+                        span{
+                            color: $color-card-span;
+                            font-size: $font-size-content;
+                        }
+                    }
+                }
+                .card-body{
+                    p{
+                        font-size: $font-size-content;
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+            .card-1{
+                margin-top: 1rem;
+            }
+            .card-2{
+                margin-top: 2rem;
+            }
+            .card-3{
+                margin-top: 3rem;
+            }
+            
+        }
+    }
+
+}
+
+
